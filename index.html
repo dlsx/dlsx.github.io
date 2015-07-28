@@ -1,0 +1,789 @@
+<html>
+	<head>
+	<title> D.L.S.X. </title>
+	<!-- Rendering and touch zoom -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Access Mobile Stylesheet -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		
+	<link href="bee.png" rel="icon"> <!-- Title Icon -->
+	<!-- Load JQuery -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<!-- Load JQuery Mobile -->
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+	<!--calling the api for text to voice-->
+	<script src="http://code.responsivevoice.org/responsivevoice.js"></script> 
+	
+	<style>
+	#Homepage{
+		background: #deff95
+	}
+	h1{ 
+		font-family: Impact;
+		font-size: 5em;
+	
+	}
+	#Tortoise{
+		background: #deff95
+	}
+	#Goldilocks{
+		background: #deff95
+	}
+	p{
+		font-family: }
+	#tab1 { <!--New Bee Tab-->
+    border-radius: 20px;
+    background: #fff591;
+    padding: 30px; 
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	
+	}
+
+	#tab2 { <!--Worker Bee Tab-->
+    border-radius: 20px;
+    background: #ffd03f;
+	padding:30px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	  
+	}
+	#tab3 {<!--Queen Bee Tab-->
+    border-radius: 20px;
+    background: #ffac2c;
+    padding: 30px; 
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	
+	}
+	#tab4 {<!-- About Us Tab-->
+    border-radius: 20px;
+    background: #73e5c0;
+    padding: 30px; 
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	  
+	}
+	
+	#Tortoise{
+	max-width: 100%;
+    height: auto;
+    width: auto\9;	
+	
+	}
+	
+	#homemenu{
+		font-family: "Times New Roman", Times, serif;
+		font-size: 350%
+	}
+	#TortoiseI{
+	background: #fff591;
+	}
+	
+	#NewBee{
+	background: #fff591;
+	
+	}
+	
+	#WorkerBee{
+	background: #ffd03f; 
+	
+	}
+	
+	#QueenBee{
+	background: #ffac2c;
+	
+	}
+	
+	#AboutUs{
+	background: #73e5c0;
+	
+	}
+	
+	#Quiz{
+	background: #deff95;
+	}
+	h3{
+		font-family: Arial;
+		color: #2F4F4F;
+		font-size: 100%;
+	}
+	
+	#Submit{
+	background: #deff95;
+	}
+	
+	#GoldilocksQuiz{
+		background: #deff95;
+	h3{
+		font-family: Arial;
+		color: #2F4F4F;
+		font-size: 100%;
+	}
+	}
+	
+	#SubmitQuiz{
+	background: #deff95;
+	}
+	
+	<!-- hexagons in level pages-->
+	.hexagon {
+	  position: relative;
+	  width: 300px; 
+	  height: 173.21px;
+	  background-color: #64C7CC;
+	  margin: 86.60px 0;
+	}
+
+	.hexagon:before,
+	.hexagon:after {
+	  content: "";
+	  position: absolute;
+	  width: 0;
+	  border-left: 150px solid transparent;
+	  border-right: 150px solid transparent;
+	}
+
+	.hexagon:before {
+	  bottom: 100%;
+	  border-bottom: 86.60px solid #64C7CC;
+	}
+
+	.hexagon:after {
+	  top: 100%;
+	  width: 0;
+	  border-top: 86.60px solid #64C7CC;
+	}
+		.hexagon {
+	  position: relative;
+	  width: 300px; 
+	  height: 173.21px;
+	  background-color: #73e5c0;
+	  margin: 86.60px 0;
+	}
+
+	.hexagon:before,
+	.hexagon:after {
+	  content: "";
+	  position: absolute;
+	  width: 0;
+	  border-left: 150px solid transparent;
+	  border-right: 150px solid transparent;
+	}
+
+	.hexagon:before {
+	  bottom: 100%;
+	  border-bottom: 86.60px solid #73e5c0;
+	}
+
+	.hexagon:after {
+	  top: 100%;
+	  width: 0;
+	  border-top: 86.60px solid #73e5c0;
+	}	
+	.hexagon1 {
+	  position: relative;
+
+	  right:300px;
+	  left:350px;
+	  width: 300px; 
+	  height: 173.21px;
+	  background-color: #73e5c0;
+	  margin: 86.60px 0;
+	}
+
+	.hexagon1:before,
+	.hexagon1:after {
+	  content: "";
+	  position: absolute;
+	  width: 0;
+	  border-left: 150px solid transparent;
+	  border-right: 150px solid transparent;
+	}
+
+	.hexagon1:before {
+	  bottom: 100%;
+	  border-bottom: 86.60px solid #73e5c0;
+	}
+
+	.hexagon1:after {
+	  top: 100%;
+	  width: 0;
+	  border-top: 86.60px solid #73e5c0;
+	}
+	p{
+		font-family:Arial;
+		font-style:Bold;
+		font-size:20px;
+		margin-top:100px;
+		margin-bottom:100px;
+		margin-right:100px;
+		margin-left:100px;
+		line-height: 200%;
+		text-indent: 50px;
+	}
+	a:link {
+		text-decoration: none;
+		font-family:Impact;
+		font-size:20px;
+	}
+
+	a:visited {
+		text-decoration: none;
+
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+	<!--not working-->
+	h4 {
+		color:#FFFAFA;
+		font-size:40px;
+	}
+
+<!-- for position fixed and then either right or left put px-->
+	</style>
+	
+	</head>
+	
+	<body>
+		<!--HOME PAGE-->
+	<div data-role="page" id= "Homepage">
+		
+		<!--HEADER -->
+		<div data-role = “Header”>
+			<center><h1 style="font-family: cursive;text-decoration: overline; font-size: 100px;"> D.L.S.X. </h1></center>
+			<marquee scrollamount="10"><img src="beebanner1.png"></marquee> 
+		</div>
+		<!--CONTENT-->
+		<div data-role = "content">
+			<center>
+				<div id = "homemenu">
+					<h4 id="tab1"><a href="#NewBee"> N E W - B E E </a> </h4>
+					<h4 id="tab2"><a href="#WorkerBee"> W O R K E R - B E E </a> </h4>
+					<h4 id="tab3"><a href="#QueenBee"> Q U E E N - B E E </a> </h4>
+					<h4 id="tab4"><a href="#AboutUs"> A B O U T .  U S </a> </h4>
+				</div>
+
+			</center>
+		</div>
+	</div>
+	
+	<!--New Bee Page-->
+	
+	<div data-role="page" id="NewBee">
+	
+		<!-- Header -->
+		<div data-role= "Header">
+			<center><h1> Welcome to the hive! </h1></center>
+		</div>	
+		
+		<!--Content -->
+		<div data-role="content">
+			<p> Choose one to join the swarm! </p>
+			<div class="hexagon"> 
+				<p> <center> <a href="#Tortoise"> Tortoise and the Hare </a> <img id="theharee" src="theharee.png"> </center> </p>
+			</div>
+			<div class="hexagon1">
+				<p> <center> <a href="#Goldilocks"> Goldilocks </a> <center> <img id="goldilox" src="goldilox.png"> </center> </p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- WorkerBee page -->
+	<div data-role="page" id="WorkerBee" >
+		<!-- header -->
+		<div data-role= "Header">
+			<center><h1> Welcome back! </h1> </center>
+		</div>
+		
+		<!-- Content -->
+		<div data-role="content">
+			<p> Choose one from below </p>
+			<div class="hexagon">
+				<p> <center> <a href="#TortoiseI"> Tortoise and the Hare </a> <img id="theharee" src="theharee.png"> </center> </p>
+			</div>
+			<div class="hexagon1"></div>
+		</div>
+	</div> 
+	
+	<!-- Queen Bee page-->
+	<div data-role="page" id="QueenBee" >
+		<!-- header -->
+		<div data-role= "Header">
+			<center><h1> We've been waiting for you, your Majesty! </h1> </center> 
+		</div>
+		
+		<!-- content -->
+		<div data-role="content">
+			<p> You know what to do...</p>
+			<div class="hexagon"></div>
+			<div class="hexagon1"></div>
+		</div>
+	</div>	
+	
+	<!-- About us -->
+	<div data-role="page" id="AboutUs">
+		<!--header--> 
+		<div data-role= "Header">
+			<center><h1> Meet the Creators </h1> </center>
+		</div>
+		
+		<!-- content -->
+		<div data-role="content">
+			<p> <center> Dynamic Learning for Student X-cellence was founded by four high school girls (Daisy, Lydia, Sara, Xochitl). They all took place in the Girls Who Code Immersion summer program and are passionate about beginning to fix the educational inequalitites based needed resources outside of the classroom. Their mission is to provide young students ranging from ages 4-6 with accessible practice of fluent English outside of the classroom. </center> </p>
+			<p> <img id="daisy" src="daisy.png"> Daisy <img id="lydia" src="lydia.png"> Lydia  <img id="sara" src="sara.png"> Sara <img id="denisse" src="denisse.png"> Xochitl </p>
+			<p> <center> <a href="#Homepage"> |   Back to Home   | </a> </p>
+		</div>
+	</div>
+	
+	<!-- story number 1 -->
+	<div data-role="page" id="Tortoise">
+	<!-- header -->
+	<div data-role="Header">
+		<center><h1 style="color:FF6347;text-decoration: overline;"> Tortoise and the Hare </h1> </center>
+	</div>
+	
+	<!-- content -->
+	<div data-role="content">
+		<center> <img id="theharee" src="theharee.png"> </center>
+		<center> <p> There once was a Hare who talked about how fast he could run. Tired of hearing him show off, the Tortoise challenged him to a race. The animals went to watch the race.
+		The Hare ran down the road for a while and then paused to rest. He looked back at the tortoise and said, "How will you win this race when you are walking so slowly?"
+		The Hare fell asleep, thinking, "I have plenty of time to sleep."
+		The Tortoise walked; never stopping until he came to the finish line.
+		The animals who were watching cheered so loudly for Tortoise, that they woke up Hare. The Hare began to run again, but it was too late. Tortoise was already over the line. 
+		</p> </center>
+		<button class="jsbutton" onclick="responsiveVoice.speak('There once was a Hare who talked about how fast he could run. Tired of hearing him show off, the Tortoise challenged him to a race. The animals went to watch the race. The Hare ran down the road for a while and then paused to rest. He looked back at the tortoise and said, How will you win this race when you are walking so slowly? The Hare fell asleep, thinking, I have plenty of time to sleep. The Tortoise walked; never stopping until he came to the finish line. The animals who were watching cheered so loudly for Tortoise, that they woke up Hare. The Hare began to run again, but it was too late. Tortoise was already over the line. ','UK English Female',{rate:0.75,pitch:1}); " type= "button" value="Play">Listen to Story</button>
+		<button class="pausebutton" onclick="responsiveVoice.cancel();" type ="button" value="Stop"> Stop Story</button>
+		<p> <center> <a href="#Quiz"> Take Quiz! </a> </center> </p>
+	</div>
+	</div>
+	
+	<!-- the quiz for story T.A.H.-->
+	<div data-role="page" id="Quiz">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+		<title>Quiz</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+		<center><h1 style="font-family:Impact;font-size:300%;color:#708090">Tortoise and the Hare Quiz </h1></center>
+		<center><img src="imgres.jpg"></center>
+            <ol>
+            
+                <li>
+                    <h3>The Hare is...</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                        <label for="question-1-answers-A">A) slow </label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                        <label for="question-1-answers-B">B) fast</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                        <label for="question-1-answers-C">C) hungry</label>
+                    </div>
+                    
+                
+                </li>
+                
+                <li>
+                
+                    <h3>Who won the race?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+                        <label for="question-2-answers-A">A) Tortoise</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+                        <label for="question-2-answers-B">B) Hare</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+                        <label for="question-2-answers-C">C) No one</label>
+                    </div>
+                    
+                
+                </li>
+                
+                <li>
+                
+                    <h3>What did the hare do in the middle of the race?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+                        <label for="question-3-answers-A">A) Fall asleep</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+                        <label for="question-3-answers-B">B) Run faster</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+                        <label for="question-3-answers-C">C) Trip the Tortoise </label>
+                    </div>
+                    
+                
+                </li>
+				
+            </ol>
+            
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-68528-29");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+	
+	<p> <center> <a href="#Submit"> Submit </a> </center> </p>
+
+	</div>
+	
+	
+	<!-- answers page -->
+	<div data-role="page" id="Submit" >
+		<!--header -->
+	<div data-role="Header" >
+		<h1><center> Tortoise and the Hare Answers </center> </h1>
+	</div>
+		<!-- content -->
+	<div data-role="content" >
+	<center> <img id="quizbox1" src="quizbox1.png"> </center>
+	<p> <center> <a href="#Homepage"> |   Back to Home   | </a> <a href="#NewBee"> |  Back to New Bee page   | </a> </center> </p>
+	</div>
+	</div>
+	
+	<!-- story number 2 -->
+	<div data-role="page" id="Goldilocks">
+	<!-- header -->
+	<div data-role="Header">
+		<center><h1 style="color:FF6347;text-decoration: overline;"> Goldilocks and the Three Bears </h1> </center>
+	</div>
+	
+	<!-- content -->
+	<div data-role="content">
+		<center> <img id="goldilox" src="goldilox.png"> </center>
+		<center><p> Once upon a time, there was a little girl named Goldilocks.  She went for a walk in the forest.  Soon, she saw a house.  She knocked and, when no one answered, she walked right in.There were three bowls of porridge at the table.  Goldilocks was hungry.  She tasted the porridge from the first bowl.
+		"This porridge is too hot!" she said.
+		So she tasted the porridge from the second bowl.
+		"This porridge is too cold," she said.
+		So she tasted the last bowl of porridge.
+		"This porridge is just right," she said happily and she ate it all up.
+		After she'd eaten the bears' breakfasts she felt a little sleepy.  So, she walked into the living room where she saw three chairs.  Goldilocks sat in the first chair.  
+		"This chair is too big!" she said.
+		So she sat in the second chair.
+		"This chair is too big, too!"  she said.
+		So she tried the last and smallest chair.
+		"Ahhh, this chair is just right," she sighed.  But just as she sat down into the chair, it broke into pieces!
+		Goldilocks became very tired, so she went to the bedroom.  She lay down in the first bed, but it was too hard.  Then she lay in the second bed, but it was too soft. Then she lay down in the third bed and it was just right.  Goldilocks fell asleep.
+
+		As she was sleeping, the three bears came home.
+		"Someone's been eating my porridge," said the Papa bear.
+		"Someone's been eating my porridge," said the Mama bear.
+		"Someone's been eating my porridge and they ate it all up!" cried the Baby bear.
+		"Someone's been sitting in my chair," said the Papa bear.
+		"Someone's been sitting in my chair," said the Mama bear.
+		"Someone's been sitting in my chair and they've broken it all to pieces," cried the Baby bear.
+
+		They went to the bedroom. Papa bear growled, "Someone's been sleeping in my bed,"
+		"Someone's been sleeping in my bed, too" said the Mama bear
+		"Someone's been sleeping in my bed and she's still there!" exclaimed Baby bear.
+
+		Just then, Goldilocks woke up and saw the three bears.  She screamed, "Help!"  And she jumped up and ran out of the room and into the forest.  And she never returned to the home of the three bears.
+	</p></center>
+	<button class="jsbutton" onclick="responsiveVoice.speak('Once upon a time, there was a little girl named Goldilocks.  She went for a walk in the forest.  Soon, she saw a house.  She knocked and, when no one answered, she walked right in. There were three bowls of porridge at the table.  Goldilocks was hungry.  She tasted the porridge from the first bowl. This porridge is too hot! she said. So she tasted the porridge from the second bowl. This porridge is too cold, she said. So she tasted the last bowl of porridge. This porridge is just right, she said happily and she ate it all up. After she had eaten the bears breakfasts she felt a little sleepy.  So, she walked into the living room where she saw three chairs.  Goldilocks sat in the first chair.  This chair is too big! she said. So she sat in the second chair. This chair is too big, too!  she said. So she tried the last and smallest chair. Ahhh, this chair is just right, she sighed.  But just as she sat down into the chair, it broke into pieces! Goldilocks became very tired, so she went to the bedroom.  She lay down in the first bed, but it was too hard.  Then she lay in the second bed, but it was too soft. Then she lay down in the third bed and it was just right.  Goldilocks fell asleep. As she was sleeping, the three bears came home. Someone has been eating my porridge said the Papa bear. Someone has been eating my porridge, said the Mama bear. Someone has been eating my porridge and they ate it all up! cried the Baby bear. Someone has been sitting in my chair, said the Papa bear. Someone has been sitting in my chair, said the Mama bear. Someone has been sitting in my chair and they have broken it all to pieces, cried the Baby bear. They went to the bedroom. Papa bear growled, Someone has been sleeping in my bed, Someone has been sleeping in my bed, too said the Mama bear. Someone has been sleeping in my bed and she is still there! exclaimed Baby bear. Just then, Goldilocks woke up and saw the three bears.  She screamed, Help!  And she jumped up and ran out of the room and into the forest.  And she never returned to the home of the three bears.','UK English Female',{rate:0.75,pitch:1}); " type= "button" value="Play">Play Story</button>
+	<button class="pausebutton" onclick="responsiveVoice.cancel();" type ="button" value="Stop"> Stop Story</button>
+	<p> <center> <a href="#GoldilocksQuiz"> Take Quiz! </a> </center> </p>
+	</div>
+</div>
+	
+	<!-- story number 1 for I -->
+	<div data-role="page" id="TortoiseI">
+	<!-- header -->
+	<div data-role="Header">
+		<center><h1> Tortoise and the Hare </h1> </center>
+	</div>
+	
+	<!-- content -->
+	<div data-role="content">
+		<center> <img id="theharee" src="theharee.png"> </center>
+		<body>
+		There once was a fast Hare who talked about how 1.
+		<input type="text" id="fast" size="20"> <!-- Creates the drop down menus with the first option blank-->
+		he could run. Tired of hearing him show off, the Tortoise 2.
+		<input type="text" id="challenged" size="20"> 
+		him to a race. The animals went to watch the race.
+
+		The Hare 3.
+		<input type="text" id="ran" size="20"> 
+		down the road for a while and then paused to rest. He looked back at the tortoise and said, "How will you win this race when you are walking so 4.
+		<input type="text" id="slowly" size="20"> 
+		?"
+
+		The Hare fell asleep, thinking, "I have plenty of time to sleep."
+
+		The Tortoise walked; 5. <input type="text" id="never" size="20">  stopping until he came to the finish line.
+
+		The animals who were watching cheered so 6. <input type="text" id="loudly" size="20"> 
+		for Tortoise, that they woke up Hare. The Hare began to run again, but it was too 7.
+		<input type="text" id="late" size="20"> 
+		. Tortoise was already over the line. 
+
+		<p></p>
+		<p>Select the Best Word for Each Blank:</p>
+
+		<form> <!--creates the form with all the options in drop down menu -->
+		1.
+		<select id="myList0" onchange="myFunction()"> <!-- making an id so accessing this specific list is easy -->
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  <!-- All the options for the drop down menu are created here-->
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<form>
+		2.
+		<select id="myList1" onchange="myFunction()">
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<form>
+		3.
+		<select id="myList2" onchange="myFunction()">
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<form>
+		4.
+		<select id="myList3" onchange="myFunction()">
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<form>
+		5.
+		<select id="myList4" onchange="myFunction()">
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<form>
+		6.
+		<select id="myList5" onchange="myFunction()">
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<form>
+		7.
+		<select id="myList6" onchange="myFunction()">
+		  <option></option>
+		  <option>late</option>
+		  <option>slowly</option>  
+		  <option>loudly</option>
+		  <option>challenged</option>
+		  <option>ran</option>
+		  <option>never</option>
+		  <option>fast</option>
+		</select>
+		</form>
+
+		<script>
+		function myFunction() {
+		<!--tH stands for the story title: tortoise and hare-->
+			var tHlist0 = document.getElementById("myList0"); 
+			var tHlist1 = document.getElementById("myList1");
+			var tHlist2 = document.getElementById("myList2");
+			var tHlist3 = document.getElementById("myList3");
+			var tHlist4 = document.getElementById("myList4");
+			var tHlist5 = document.getElementById("myList5");
+			var tHlist6 = document.getElementById("myList6");
+			document.getElementById("fast").value = tHlist0.options[tHlist0.selectedIndex].text;  <!--accesses the certain blank by id and replaces the blank with the word you choose-->
+			document.getElementById("challenged").value = tHlist1.options[tHlist1.selectedIndex].text;
+			document.getElementById("ran").value = tHlist2.options[tHlist2.selectedIndex].text;
+			document.getElementById("slowly").value = tHlist3.options[tHlist3.selectedIndex].text;
+			document.getElementById("never").value = tHlist4.options[tHlist4.selectedIndex].text;
+			document.getElementById("loudly").value = tHlist5.options[tHlist5.selectedIndex].text;
+			document.getElementById("late").value = tHlist6.options[tHlist6.selectedIndex].text;
+			
+		}
+		</script>
+
+		</body>
+	</div>
+	</div>
+	
+	<!-- quiz for goldilocks -->
+	<div data-role="page" id="GoldilocksQuiz">
+		<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+		<title>Quiz</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+		<center><h1 style="font-family:Impact;font-size:300%;color:#708090">Goldilocks and the Three Bears Quiz </h1></center>
+		<center><img src="goldilocks.png"></center>
+		
+            <ol>
+            
+                <li>
+                
+                    <h3>What is the name of the girl who went to the house?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                        <label for="question-1-answers-A">A) Baby bear </label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                        <label for="question-1-answers-B">B) Goldilocks</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                        <label for="question-1-answers-C">C) Papa bear</label>
+                    </div>
+                    
+                
+                </li>
+                
+                <li>
+                
+                    <h3>What happened to Baby bear’s chair?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+                        <label for="question-2-answers-A">A) It was too hard</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+                        <label for="question-2-answers-B">B) It fell</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+                        <label for="question-2-answers-C">C) It broke into pieces</label>
+                    </div>
+                    
+                
+                </li>
+                
+                <li>
+                
+                    <h3>What was Papa bear’s porridge?</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+                        <label for="question-3-answers-A">A) It was too hot</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+                        <label for="question-3-answers-B">B) It was just right!</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+                        <label for="question-3-answers-C">C) It was too cold </label>
+                    </div>
+                    
+                
+                </li>
+				
+            </ol>
+		
+		</form>
+		<p> <center> <a href="#SubmitQuiz"> Submit </a> </center> </p>
+	
+	</div>
+	
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-68528-29");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+	
+	<!-- answers page for goldilocks -->
+	<div data-role="page" id="SubmitQuiz" >
+		<!--header -->
+	<div data-role="Header" >
+		<h1><center> Goldilocks and the Three Bears Answers </center> </h1>
+	</div>
+		<!-- content -->
+	<div data-role="content" >
+	<center> <img id="quizbox2" src="quizbox2.png"> </center>
+	<p> <center> <a href="#Homepage"> |   Back to Home   | </a> <a href="#NewBee"> |  Back to New Bee page   | </a> </center> </p>
+	</div>
+	</div>
+	
+	</body>
+</html>

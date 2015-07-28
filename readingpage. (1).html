@@ -1,0 +1,198 @@
+<html>
+	<head>
+	<title> D.L.S.X. </title>
+	<!-- Rendering and touch zoom -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Access Mobile Stylesheet -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		
+	<link href="bee.png" rel="icon"> <!-- Title Icon -->
+	<!-- Load JQuery -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<!-- Load JQuery Mobile -->
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<style>
+	#Homepage{
+		background: #deff95
+	}
+	h1{ 
+		font-family: Impact;
+		font-size: 5em;
+	
+	}
+	p{
+		font-family: }
+	#tab1 {
+    border-radius: 20px;
+    background: #fff591;
+    padding: 30px; 
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	
+	}
+
+	#tab2 {
+    border-radius: 20px;
+    background: #ffd03f;
+	padding:30px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	  
+	}
+	#tab3 {
+    border-radius: 20px;
+    background: #ffac2c;
+    padding: 30px; 
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	
+	}
+	#tab4 {
+    border-radius: 20px;
+    background: #73e5c0;
+    padding: 30px; 
+    max-width: 100%;
+    height: auto;
+    width: auto\9;	  
+	}
+	#homemenu{
+		font-family: "Times New Roman", Times, serif;
+		font-size: 350%
+	}
+	
+	#NewBee{
+	background: #fff591;
+	
+	}
+	
+	#WorkerBee{
+	background: #ffd03f; 
+	
+	}
+	
+	#QueenBee{
+	background: #ffac2c;
+	
+	}
+	
+	#AboutUs{
+	background: #73e5c0;
+	
+	}
+	
+	.hexagon {
+	  position: relative;
+	  width: 300px; 
+	  height: 173.21px;
+	  background-color: #64C7CC;
+	  margin: 86.60px 0;
+	}
+
+	.hexagon:before,
+	.hexagon:after {
+	  content: "";
+	  position: absolute;
+	  width: 0;
+	  border-left: 150px solid transparent;
+	  border-right: 150px solid transparent;
+	}
+
+	.hexagon:before {
+	  bottom: 100%;
+	  border-bottom: 86.60px solid #64C7CC;
+	}
+
+	.hexagon:after {
+	  top: 100%;
+	  width: 0;
+	  border-top: 86.60px solid #64C7CC;
+	}
+	</style>
+	
+	</head>
+	
+	<body>
+		<!--HOME PAGE-->
+	<div data-role="page" id= "Homepage">
+		
+		<!--HEADER -->
+		<div data-role = “Header”>
+			<center><h1> D.L.S.X. </h1></center>
+			<marquee scrollamount="10"><img src="beebanner1.png"></marquee> 
+		</div>
+		<!--CONTENT-->
+		<div data-role = "content">
+			<center>
+				<div id = "homemenu">
+					<p id="tab1"><a href="#NewBee"> New Bee </a> </p>
+					<p id="tab2"><a href="#WorkerBee"> Worker Bee </a> </p>
+					<p id="tab3"><a href="#QueenBee"> Queen Bee </a> </p>
+					<p id="tab4"><a href="#AboutUs"> About Us </a> </p>
+				</div>
+
+			</center>
+		</div>
+	</div>
+	
+	<!--Bee Hive Page-->
+	
+	<div data-role="page" id="NewBee">
+	
+		<!-- Header -->
+		<div data-role= "Header">
+			<center><h1> Welcome to the hive! </h1></center>
+		</div>	
+		
+		<!--Content -->
+		<div data-role="content">
+			<p> Choose one to join the swarm! </p>
+			<div class="hexagon"></div>
+			
+		</div>
+	</div>
+	
+	<!-- WorkerBee page -->
+	<div data-role="page" id="WorkerBee" >
+		<!-- header -->
+		<div data-role= "Header">
+			<center><h1> Weclome back! </h1> </center>
+		</div>
+		
+		<!-- Content -->
+		<div data-role="content">
+			<p> Choose one from below </p>
+			<div class="hexagon"></div>
+		</div>
+	</div> 
+	
+	<!-- Queen Bee page-->
+	<div data-role="page" id="QueenBee" >
+		<!-- header -->
+		<div data-role= "Header">
+			<center><h1> We've been waiting for you, your Majesty! </h1> </center> 
+		</div>
+		
+		<!-- content -->
+		<div data-role="content">
+			<p> You know what to do...</p>
+			<div class="hexagon"></div>
+		</div>
+	</div>	
+	
+	<!-- About us -->
+	<div data-role="page" id="AboutUs">
+		<!--header--> 
+		<div data-role= "Header">
+			<center><h1> Meet the Creators </h1> </center>
+		</div>
+		
+		<!-- content -->
+		<div data-role="content">
+			<p> hey </p>
+		</div>
+	</div>
+		
+	</body>
+</html>

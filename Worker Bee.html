@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+There once was a fast Hare who talked about how 
+<input type="text" id="fast" size="20"> <!-- Creates the drop down menus with the first option blank-->
+he could run. Tired of hearing him show off, the Tortoise 
+<input type="text" id="challenged" size="20"> 
+him to a race. The animals went to watch the race.
+
+The Hare
+<input type="text" id="ran" size="20"> 
+down the road for a while and then paused to rest. He looked back at the tortoise and said, "How will you win this race when you are walking so 
+<input type="text" id="slowly" size="20"> 
+?"
+
+The Hare fell asleep, thinking, "I have plenty of time to sleep."
+
+The Tortoise walked; <input type="text" id="never" size="20">  stopping until he came to the finish line.
+
+The animals who were watching cheered so <input type="text" id="loudly" size="20"> 
+for Tortoise, that they woke up Hare. The Hare began to run again, but it was too 
+<input type="text" id="late" size="20"> 
+. Tortoise was already over the line. 
+
+<p></p>
+<p>Select the Best Word for Each Blank:</p>
+
+<form> <!--creates the form with all the options in drop down menu -->
+1.
+<select id="myList0" onchange="myFunction()"> <!-- making an id so accessing this specific list is easy -->
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  <!-- All the options for the drop down menu are created here-->
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<form>
+2.
+<select id="myList1" onchange="myFunction()">
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<form>
+3.
+<select id="myList2" onchange="myFunction()">
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<form>
+4.
+<select id="myList3" onchange="myFunction()">
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<form>
+5.
+<select id="myList4" onchange="myFunction()">
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<form>
+6.
+<select id="myList5" onchange="myFunction()">
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<form>
+7.
+<select id="myList6" onchange="myFunction()">
+  <option></option>
+  <option>late</option>
+  <option>slowly</option>  
+  <option>loudly</option>
+  <option>challenged</option>
+  <option>ran</option>
+  <option>never</option>
+  <option>fast</option>
+</select>
+</form>
+
+<script>
+function myFunction() {
+<!--tH stands for the story title: tortoise and hare-->
+    var tHlist0 = document.getElementById("myList0"); 
+    var tHlist1 = document.getElementById("myList1");
+	var tHlist2 = document.getElementById("myList2");
+	var tHlist3 = document.getElementById("myList3");
+	var tHlist4 = document.getElementById("myList4");
+	var tHlist5 = document.getElementById("myList5");
+	var tHlist6 = document.getElementById("myList6");
+    document.getElementById("fast").value = tHlist0.options[mylist0.selectedIndex].text;  <!--accesses the certain blank by id and replaces the blank with the word you choose-->
+    document.getElementById("challenged").value = tHlist1.options[mylist1.selectedIndex].text;
+	document.getElementById("ran").value = tHlist2.options[mylist2.selectedIndex].text;
+	document.getElementById("slowly").value = tHlist3.options[mylist3.selectedIndex].text;
+	document.getElementById("never").value = tHlist4.options[mylist4.selectedIndex].text;
+	document.getElementById("loudly").value = tHlist5.options[mylist5.selectedIndex].text;
+	document.getElementById("late").value = tHlist6.options[mylist6.selectedIndex].text;
+    
+}
+</script>
+
+</body>
+</html>
